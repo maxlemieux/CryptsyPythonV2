@@ -32,22 +32,22 @@ class Cryptsy:
             ret = requests.put(link,
                                params=query,
                                headers=headers,
-                               verify=False)
+                               verify=True)
         elif(get_method == "DELETE"):
             ret = requests.delete(link,
                                   params=query,
                                   headers=headers,
-                                  verify=False)
+                                  verify=True)
         elif(get_method == "POST"):
             ret = requests.post(link,
                                 params=query,
                                 headers=headers,
-                                verify=False)
+                                verify=True)
         else:
             ret = requests.get(link,
                                params=query,
                                headers=headers,
-                               verify=False)
+                               verify=True)
         print ret.text
         try:
             jsonRet = ret.json()
